@@ -23,3 +23,4 @@ The Financial Agent Chatbot is a Python-based application that leverages AI-powe
 
 1. **Python**: Ensure Python 3.8+ is installed. You can download it [here](https://www.python.org/downloads/).
 2. **Install Required Libraries**: Dependencies are listed in the `requirements.txt` file.
+
