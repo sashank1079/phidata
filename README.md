@@ -24,3 +24,28 @@ The Financial Agent Chatbot is a Python-based application that leverages AI-powe
 1. **Python**: Ensure Python 3.8+ is installed. You can download it [here](https://www.python.org/downloads/).
 2. **Install Required Libraries**: Dependencies are listed in the `requirements.txt` file.
 
+### Usage
+Financial Analysis:
+
+Query the Finance Agent for stock prices, fundamentals, and analyst recommendations.
+Web Search:
+
+Ask the Web Search Agent for the latest financial news or information on specific topics.
+Interactive Playground:
+
+Access the AI agents through a web-based interactive interface. (Run the chatbot.py file)
+
+### Technologies Used
+Python: Core programming language.
+phi Library: Used for building and managing AI agents.
+OpenAI GPT: For natural language processing and financial analysis.
+YFinance: For retrieving stock data.
+DuckDuckGo Search: For web-based financial news and information.
+FastAPI: For serving the interactive playground interface.
+Uvicorn: ASGI server for running the application.
+
+
+### Acknowledgements
+OpenAI for the GPT models.
+YFinance for stock market data.
+DuckDuckGo for web search capabilities.
