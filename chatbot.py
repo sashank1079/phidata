@@ -1,3 +1,4 @@
+import phi
 from phi.agent import Agent
 from phi.model.openai import OpenAIChat
 from phi.tools.duckduckgo import DuckDuckGo
@@ -6,7 +7,10 @@ import openai
 import os 
 from dotenv import load_dotenv
 
+from phi.playground import Playground, serve_playground_app
+
 load_dotenv()
+phi.api =os.getenv('PHIDATA_API_KEY')
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 web_search_agent = Agent(
@@ -21,6 +25,7 @@ web_search_agent = Agent(
 ) 
 
 finance_agent = Agent(
+    name= "Finance Agent",
     tools=[YFinanceTools(stock_price=True, analyst_recommendations=True, stock_fundamentals=True)],
     show_tool_calls=True,
     model = OpenAIChat(id="gpt-4o"),
@@ -29,12 +34,7 @@ finance_agent = Agent(
     markdown=True,
 )
 
-multi_ai_agent = Agent(
-    team= [web_search_agent, finance_agent ],
-    model = OpenAIChat(id="gpt-4o"),
-    instructions= ["Always show sources of the informtion.","Format your response using markdown and use tables to display data where possible."],
-    show_tool_calls=True,
-    markdown=True,
-)
+app= Playground(agents=[finance_agent, web_search_agent]).get_app()
 
-multi_ai_agent.print_response("Summarize analyst recommendations and also share latest TSLA news.", stream=True)
+if __name__ == "__main__":
+    serve_playground_app("chatbot:app",reload=True)
