@@ -11,4 +11,7 @@ sqlalchemy
 pgvector
 psycopg[binary]
 pypdf
+streamlit
+google-generativeai
+
  
