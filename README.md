@@ -1,51 +1,66 @@
-# Financial Agent Chatbot
+# AI Agent Suite with Phidata Playground
 
-The Financial Agent Chatbot is a Python-based application that leverages AI-powered agents to assist with financial analysis and web-based research. This project integrates tools for stock price analysis, analyst recommendations, and the latest financial news to provide an interactive and efficient platform for investment analysis.
+This repository features a suite of AI-powered agents designed to assist with various tasks, including video analysis, financial data retrieval, and PDF document processing. Leveraging the Phidata Playground, these agents provide an interactive platform for efficient data analysis and research.
+
+## Table of Contents
+
+- [Features](#features)
+- [Setup Instructions](#setup-instructions)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Running the Agents](#running-the-agents)
+
+
 
 ## Features
 
-- **Financial Analysis**:
-  - Provides stock prices, analyst recommendations, and stock fundamentals.
-  - Formats responses in Markdown with tables for easy readability.
-
-- **Web Search Integration**:
-  - Retrieves the latest financial news and other relevant information using DuckDuckGo.
-
-- **Interactive Interface**:
-  - Built with the `phi` library's Playground, allowing seamless interaction with AI agents.
-
-- **Multi-Agent Collaboration**:
-  - Combines specialized agents for finance and web search to deliver comprehensive insights.
+- **Video Analyzer Agent**: Analyzes video content to extract key information and insights.
+- **Financial Agent**: Retrieves and analyzes financial data, including stock prices, analyst recommendations, and company news.
+- **PDF Assistant**: Processes PDF documents to extract and summarize relevant information.
+- **Interactive Interface**: Utilizes the Phidata Playground for seamless interaction with AI agents.
 
 ## Setup Instructions
 
 ### Prerequisites
 
-1. **Python**: Ensure Python 3.8+ is installed. You can download it [here](https://www.python.org/downloads/).
-2. **Install Required Libraries**: Dependencies are listed in the `requirements.txt` file.
+- **Python**: Ensure Python 3.8 or higher is installed. Download it from the [official website](https://www.python.org/downloads/).
+- **Phidata**: Install the Phidata library to utilize the Playground feature.
 
-### Usage
-Financial Analysis:
+### Installation
 
-Query the Finance Agent for stock prices, fundamentals, and analyst recommendations.
-Web Search:
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/sashank1079/phidata.git
+   cd phidata
 
-Ask the Web Search Agent for the latest financial news or information on specific topics.
-Interactive Playground:
+2. **Set Up a Virtual Environment**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   ```
 
-Access the AI agents through a web-based interactive interface. (Run the chatbot.py file)
+3. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Technologies Used
-Python: Core programming language.
-phi Library: Used for building and managing AI agents.
-OpenAI GPT: For natural language processing and financial analysis.
-YFinance: For retrieving stock data.
-DuckDuckGo Search: For web-based financial news and information.
-FastAPI: For serving the interactive playground interface.
-Uvicorn: ASGI server for running the application.
+## Usage
 
+### Running the Agents
 
-### Acknowledgements
-OpenAI for the GPT models.
-YFinance for stock market data.
-DuckDuckGo for web search capabilities.
+**1. Video Analyzer agent:**
+    ```bash
+    streamlit run video_analyzer.py
+    ```
+
+**2. Financial agent:**
+    ```bash
+    python financial_agent.py
+    ```
+
+**3. PDF assistant agent:**
+    ```bash
+    python pdfassistant.py
+    ```
+
