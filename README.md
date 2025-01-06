@@ -50,17 +50,17 @@ This repository features a suite of AI-powered agents designed to assist with va
 ### Running the Agents
 
 **1. Video Analyzer agent:**
-    ```bash
+    ```
     streamlit run video_analyzer.py
     ```
 
 **2. Financial agent:**
-    ```bash
+    ```
     python financial_agent.py
     ```
 
 **3. PDF assistant agent:**
-    ```bash
+    ```
     python pdfassistant.py
     ```
 
